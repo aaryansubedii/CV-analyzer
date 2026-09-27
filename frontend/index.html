@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>📄 CV Analyzer</h1>
+    <p class="subtitle">See how well your CV matches a job description</p>
+
+    <form id="analyze-form">
+        <label for="job-description">Job Description</label>
+        <textarea id="job-description" placeholder="Paste the job description here..." required></textarea>
+
+        <label for="cv-file">Upload your CV (PDF)</label>
+        <input type="file" id="cv-file" accept=".pdf" required>
+
+        <button type="submit">Analyze</button>
+    </form>
+
+    <div id="loading" class="hidden">Analyzing... this may take a few seconds</div>
+
+    <div id="result" class="hidden">
+        <h2>Results</h2>
+        <div id="result-content"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
