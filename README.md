@@ -2,6 +2,10 @@
 
 An AI-powered tool that compares a CV against a job description and provides a match score, identifies matching/missing skills, and gives actionable suggestions to improve the CV.
 
+## Why I built this
+
+I wanted to build something genuinely useful for my own placement applications while also learning how to integrate an LLM into a real application, not just call an API and print the raw response. The interesting part was designing a prompt structure that reliably returns a consistent, parseable format (score, matching skills, missing skills, suggestions) across very different job types.
+
 ## Features
 - Upload a CV (PDF) and paste a job description
 - Extracts text from the PDF automatically
@@ -31,6 +35,14 @@ An AI-powered tool that compares a CV against a job description and provides a m
 **Frontend:**
 1. Open `frontend/index.html` in your browser
 2. Make sure the backend is running first
+
+## Screenshots
+
+### CV and job description input
+![CV Analyzer input](screenshots/CV-analyzer.png)
+
+### Analysis results
+![Analysis results](screenshots/cv-suggestions.png)
 
 ## API Endpoint
 | Method | Endpoint | Description |
