@@ -10,6 +10,9 @@ load_dotenv()
 
 app = FastAPI()
 
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -70,6 +73,4 @@ SUGGESTIONS:
     return {"analysis": analysis}
 
 
-@app.get("/")
-def root():
-    return {"message": "CV Analyzer API is running"}
+app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
